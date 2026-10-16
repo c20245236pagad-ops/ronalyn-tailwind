@@ -4,96 +4,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>My Shop | Ronalyn Pagad</title>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss"> @custom-variant dark (&:where(.dark, .dark *));
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
+    <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
     </style>
 </head>
 
-</head>
-<div class="flex justify-center gap-4 my-5">
-            <button id="switch" class="bg-black text-white p-3 rounded-[20px] transition-colors duration-600 ease-in-out hover:bg-yellow-500">
-                SWITCH
-            </button>
-            <button id="toggledark" class="bg-black text-white p-3 rounded-[20px] transition-colors duration-600 ease-in-out hover:bg-yellow-500">
-                Toggledark
-            </button>
-        </div>
+<body class="bg-stone-100 text-stone-900 text-center min-h-screen transition-colors duration-500">
 
-<body class="text-center dark:bg-slate-900 bg-white text-slate-900 dark:text-white">
-    <h1 class="text-3xl font-bold"> Ronalyn D. Pagad</h1>
+    <header class="bg-emerald-950 text-white p-8">
 
-    <header>
-        <h1 class="text-3xl text-red-500 font-bold underline">
-            Hello world!
+        <p class="text-lime-300 uppercase tracking-[0.4em] text-sm">
+            Welcome to
+        </p>
+
+        <h1 id="title" class="text-6xl font-black mt-3 max-[600px]:text-4xl">
+             <span class="text-lime-400">Shop</span>
         </h1>
-        <nav class="flex justify-between items-center mx-[50px] max-[600px]:flex-col">
-            <span class="text-green-500 text-[50px]">
-                @c20245236pagad-ops
+
+        
+        <div class="flex justify-center gap-3 mt-7 flex-wrap">
+
+            <button id="sendMessage"
+                class="bg-lime-400 text-emerald-950 font-bold px-5 py-3 rounded-full hover:bg-white transition">
+              Send Message
+            </button>
+
+            <button id="replay"
+                class="border border-lime-400 text-lime-300 px-5 py-3 rounded-full hover:bg-lime-400 hover:text-emerald-950 transition">
+                Replay Timeline
+            </button>
+
+           <button id="darkMode"
+                    class="border border-slate-500 px-4 py-2 stay-lg hover:bg-slate-700">
+                   Toggle Dark Mode
+                </button>
+
+        </div>
+          <p id="subtitle" class="text-stone-300 mt-4 text-lg">
+           My Projects
+        </p>
+
+
+        <nav class="flex justify-between items-center mt-10 max-[600px]:flex-col gap-5">
+
+            <span id="logo" class="font-bold text-xl text-lime-300">
+               @c20245236.pagad-ops
             </span>
-            <ul class="flex gap-5 list-none max-[600px]:flex-col">
-                <li><a href="#projects" class="hover:text-red-500">Projects</a></li>
-                <li><a href="#services" class="hover:text-red-300">Services</a></li>
-                <li><a href="#contact" class="hover:text-red-200">Contact Me</a></li>
+
+            <ul id="navLinks" class="flex gap-7 list-none max-[600px]:flex-col">
+                <li><a href="#projects" class="hover:text-lime-300 transition">Projects</a></li>
+                <li><a href="#services" class="hover:text-lime-300 transition">Sevices</a></li>
+                <li><a href="#contact" class="hover:text-lime-300 transition">Contact</a></li>
             </ul>
+
         </nav>
+
     </header>
 
-    <main class="flex flex-wrap gap-[30px] p-[50px] m-[50px] max-[600px]:p-[15px]
-     max-[600px]:m-[10px]">
-        <!-- Projects -->
-        <section id="projects" class="flex-1 min-w-[280px] border-2 border-black p-5 
-        bg-pink-400 max-[600px]:min-w-0">
-            <h2 class="max-[768px]:text-[48px] max-[768px]:text-blue-500">
-                My Projects
-            </h2>
-            <p>
-                Personal portfolio, payroll system, company website,startup website, and compliance monitoring system.
+    <main class="max-w-6xl mx-auto p-8 flex flex-col gap-8 max-[600px]:p-4">
+
+        <section id="projects"
+            class="card bg-emerald-900 text-white p-12 rounded-[2rem] text-left max-[600px]:p-7">
+
+            <p class="text-lime-300 uppercase tracking-[0.3em] text-sm">
+                New Collection
             </p>
-        </section>
-        <!-- Services -->
-        <section id="services" class="flex-1 min-w-[280px] border-2 border-gray-300 dark:border-slate-800 dark:bg-slate-900 p-5
-         bg-gray-500 max-[600px]:min-w-0">
-            <h2 class="max-[768px]:text-[48px] max-[768px]:text-blue-500">
-                My Services
+
+            <h2 cFavorites.
             </h2>
-            <p>
-                Website Creation, System Creation, AI Automation,Database Management, Project Management, Systems
-                Analyst
+
+            <p class="mt-5 text-stone-300 leading-7 max-w-2xl">
+                Explore stylish accessories, comfortable clothing,
+                bags, and everyday essentials selected just for you.
             </p>
+
+            <a href="#contact"
+                class="inline-block mt-7 bg-lime-400 text-emerald-950 font-bold px-7 py-3 rounded-full hover:bg-white transition">
+                Explore Collection →
+            </a>
+
         </section>
-        <!-- Contact -->
-        <section id="contact" class="flex-1 min-w-[280px] border-2 border-black p-5 
-        bg-violet-500 max-[600px]:min-w-0">
-            <h2 class="max-[768px]:text-[48px] max-[768px]:text-blue-500">
-                Let's build together!
+
+        <section id="services"
+            class="card bg-white border border-stone-200 p-10 rounded-[2rem]">
+
+            <p class="text-emerald-700 uppercase tracking-[0.3em] text-sm">
+                Why Choose Us?
+            </p>
+
+            <h2 class="text-3xl font-bold mt-3">
+                Shopping Made Simple
             </h2>
-            <form action="#" class="flex flex-col gap-5">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" required class="border border-gray-400 p-2">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required class="border border-gray-400 p-2">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required class="border border-gray-400 p-2">
-                </textarea>
-                <button type="submit" class="bg-black text-white p-3 rounded-[15px] hover:bg-red-500">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+
+                <div class="bg-stone-100 p-6 rounded-2xl">
+                    <div class="text-3xl">✦</div>
+                    <h3 class="font-bold text-lg mt-3">Quality Finds</h3>
+                    <p class="text-stone-600 mt-2">
+                        Products chosen with care.
+                    </p>
+                </div>
+
+                <div class="bg-stone-100 p-6 rounded-2xl">
+                    <div class="text-3xl">♡</div>
+                    <h3 class="font-bold text-lg mt-3">Friendly Service</h3>
+                    <p class="text-stone-600 mt-2">
+                        Helpful support for every customer.
+                    </p>
+                </div>
+
+                <div class="bg-stone-100 p-6 rounded-2xl">
+                    <div class="text-3xl">✓</div>
+                    <h3 class="font-bold text-lg mt-3">Easy Ordering</h3>
+                    <p class="text-stone-600 mt-2">
+                        A simple and convenient experience.
+                    </p>
+                </div>
+                    <div id="progress"
+                         class="fixed top-0 left-0 h-1 bg-lime-400 z-50"
+                            style="width: 0%">
+                </div>
+            </div>
+
+        </section>
+
+        <section id="contact"
+            class="card bg-lime-100 border border-lime-300 p-10 rounded-[2rem]">
+
+            <h2 class="text-3xl font-bold text-emerald-950">
+                Let's Talk!
+            </h2>
+
+            <p class="mt-3 text-stone-700">
+                Have questions? We would love to hear from you.
+            </p>
+
+            <form id="contactForm"
+                class="flex flex-col gap-4 max-w-md mx-auto mt-7">
+
+                <input name="name" type="text" placeholder="Your Name"
+                    required
+                    class="bg-white text-stone-900 border border-lime-300 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-600">
+
+                <input name="email" type="email" placeholder="Your Email"
+                    required
+                    class="bg-white text-stone-900 border border-lime-300 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-600">
+
+                <textarea name="message" rows="4" placeholder="Your Message"
+                    required
+                    class="bg-white text-stone-900 border border-lime-300 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-600"></textarea>
+
+                <button type="submit"
+                    class="bg-emerald-900 text-white p-4 rounded-xl font-bold hover:bg-emerald-700 transition">
                     Send Message
                 </button>
-            </form>
-        </section>
-    </main>
-    <button id="switch"class="bg-black text-white p-(12px) rounded-[10px] transition-colors duration-500 ease-in-out hover:bg-pink-500">switch</button>
-    <button id="toggledark"class="bg-black text-white p-(12px) rounded-[10px] transition-colors duration-500 ease-in-out hover:bg-pink-500">Toggledark</button>
-    <script src="script.js"></script>
-    <script>
-        const toggleDarkButton = document.querySelector('#toggledark');
-        const html = document.querySelector('html');
 
-        toggleDarkButton.addEventListener('click', function(){
-            html.classList.toggle('dark');
+                <p id="formStatus" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer id="footer" class="bg-emerald-950 text-lime-300 p-7">
+        <p class="font-bold tracking-widest">THE GREEN MARKET</p>
+        <p class="text-sm mt-2">
+            &copy; 2026 Ronalyn Pagad | All Rights Reserved
+        </p>
+    </footer>
+
+    <script>
+        const replayButton = document.querySelector("#replay");
+        const sendButton = document.querySelector("#sendMessage");
+        const darkModeButton = document.querySelector("#darkMode");
+        const html = document.documentElement;
+
+        const intro = gsap.timeline({
+            paused: true,
+            defaults: {
+                duration: 0.8,
+                ease: "power3.out"
+            }
         });
+
+        intro
+            .from("#title", {
+                y: -70,
+                opacity: 0,
+                rotation: -8,
+                duration: 1.1,
+                ease: "elastic.out(1, 0.5)"
+            })
+            .from("#subtitle", {
+                y: 25,
+                opacity: 0
+            }, "-=0.5")
+            .from("#logo", {
+                x: -40,
+                opacity: 0
+            }, "-=0.3")
+            .from("#navLinks li", {
+                y: -25,
+                opacity: 0,
+                stagger: 0.2,
+                ease: "back.out(1.7)"
+            }, "-=0.3")
+            .from(".card", {
+                y: 60,
+                opacity: 0,
+                scale: 0.94,
+                stagger: 0.3
+            }, "-=0.2")
+            .from("#footer", {
+                y: 30,
+                opacity: 0
+            }, "-=0.2");
+
+        replayButton.addEventListener("click", function () {
+            intro.restart();
+        });
+
+        sendButton.addEventListener("click", function () {
+            document.querySelector("#contact").scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+
+        darkModeButton.addEventListener("click", function () {
+            html.classList.toggle("dark");
+
+            gsap.fromTo(darkModeButton,
+                { rotation: 0 },
+                {
+                    rotation: 360,
+                    duration: 0.8,
+                    ease: "power2.inOut",
+                    onComplete: () => {
+                        gsap.set(darkModeButton, { rotation: 0 });
+                    }
+                }
+            );
+
+            if (html.classList.contains("dark")) {
+                body.classList.remove("bg-stone-100", "text-stone-900");
+                body.classList.add("bg-stone-950", "text-white");
+            } else {
+                body.classList.remove("bg-stone-950", "text-white");
+                body.classList.add("bg-stone-100", "text-stone-900");
+            }
+        });
+
+        document.querySelectorAll(".card").forEach(card => {
+            card.addEventListener("mouseenter", () => {
+                gsap.to(card, {
+                    y: -8,
+                    scale: 1.02,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+
+            card.addEventListener("mouseleave", () => {
+                gsap.to(card, {
+                    y: 0,
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
+
+        document.querySelector("#contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            document.querySelector("#formStatus").textContent =
+                "Thank you! This is a demo form; no message was sent.";
+
+            gsap.fromTo("#formStatus",
+                { opacity: 0, y: 10 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6,
+                    ease: "power2.out"
+                }
+            );
+        });
+        
+        // Play animation on page load
+        intro.play();
     </script>
 
 </body>
-
 </html>
